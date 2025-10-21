@@ -25,7 +25,6 @@ def create_repo(repo_name, description="Auto-generated repository"):
     try:
         user = gh.get_user()
         
-        # Check if repo exists, delete if it does (for testing)
         try:
             existing_repo = user.get_repo(repo_name)
             print(f"Repository {repo_name} already exists, deleting...")
